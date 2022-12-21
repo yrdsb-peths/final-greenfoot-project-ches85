@@ -5,5 +5,4 @@ Consider using **Markdown** syntax to format the text in this file. [Markdown ba
 
 The chess-inspired game 
 This game is inspired from the game of chess. 
-In this game, you will run around as the king, which is the most important piece. 
-You will try to run to the castle to meet your queen, and fight the enemies.
+In this game, you will fight with an army of checker pieces, and only have the king.
