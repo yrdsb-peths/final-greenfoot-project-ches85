@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
  * Write a description of class TitleScreen here.
  * Title Screen.
@@ -7,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Brady
  * @version Dec 13 2022
  */
+
 public class TitleScreen extends World
 {
     Label titleLabel = new Label("The Elephant", 60);
@@ -41,8 +43,8 @@ public class TitleScreen extends World
      */
     private void prepare()
     {
-        King_black king = new King();
-        addObject(king,451,100);
+        //King_black king = new King();
+        //addObject(king,451,100);
         Label label = new Label("Press <space> to Start", 40);
         addObject(label,90,255);
         label.setLocation(203,224);
@@ -57,7 +59,7 @@ public class TitleScreen extends World
         label.setLocation(226,269);
         label2.setLocation(130,215);
         label2.setLocation(242,193);
-        elephant.setLocation(436,108);
+        //elephant.setLocation(436,108);
         label2.setLocation(144,194);
         label.setLocation(269,312);
         label2.setLocation(173,234);
@@ -67,3 +69,4 @@ public class TitleScreen extends World
         label.setLocation(247,310);
     }
 }
+

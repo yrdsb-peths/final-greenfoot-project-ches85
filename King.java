@@ -1,3 +1,7 @@
+
+
+
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -17,5 +21,38 @@ public class King extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+        // Add your action code here.
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-2);
+            //facing = "left";
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(2);
+            //facing = "right";
+        }
+        
+        
+        // Remove checker if king eats it
+        removeTouching(Checker.class);
+        
+        
+        
+        
+    }
+    /**
+    * Eat the checker and spawn new checker if a checker is already eaten.
+    */
+    public void eat()
+    {
+        if(isTouching(Checker.class))
+        {
+            removeTouching(Checker.class);
+            MyWorld world = (MyWorld) getWorld();
+            //world.createChecker();
+            world.increaseScore();
+        }
+    }
+    
 }
