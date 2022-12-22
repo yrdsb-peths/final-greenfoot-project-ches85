@@ -20,5 +20,23 @@ public class MyWorld extends World
         
         //King king = new King();
         //addObject(king, 300, 300);
+        
+    }
+    
+    public void createKing()
+    {
+        King king = new King();
+        int x = 300;
+        int y = 300;
+        addObject(king, x, y);    
+    }
+    
+    
+    public void createChecker()
+    {
+        King king = new King();
+        int x = 300;
+        int y = 300;
+        addObject(king, x, y); 
     }
 }
