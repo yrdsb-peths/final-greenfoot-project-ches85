@@ -18,5 +18,7 @@ public class Checker extends Actor
         // Add your action code here.
         setLocation(getX(), getY());
         
-    }    
+    }
+    // Creates instance of the world where the apple lives in
+    //MyWorld world = (MyWorld) getWorld();
 }
