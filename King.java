@@ -34,15 +34,14 @@ public class King extends Actor
         }
         
         
-        // Remove checker if king eats it
-        removeTouching(Checker.class);
+       
         
         
         
         
     }
     /**
-    * Eat the checker and spawn new checker if a checker is already eaten.
+    * Eat the checker and spawn new checker if a checker is eaten.
     */
     public void eat()
     {
@@ -50,8 +49,8 @@ public class King extends Actor
         {
             removeTouching(Checker.class);
             MyWorld world = (MyWorld) getWorld();
-            //world.createChecker();
-            world.increaseScore();
+            world.createChecker();
+            //world.increaseScore();
         }
     }
     
