@@ -1,7 +1,3 @@
-
-
-
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -14,13 +10,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class King extends Actor
 {
-    /**
-     * Act - do whatever the King wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootSound kingSound = new GreenfootSound("eatsound.mp3");
+    
     public void act() 
     {
-        // Add your action code here.
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
@@ -44,7 +37,8 @@ public class King extends Actor
             removeTouching(Checker.class);
             MyWorld world = (MyWorld) getWorld();
             world.createChecker();
-            //world.increaseScore();
+            world.increaseScore();
+            kingSound.play();
         }
     }
     
