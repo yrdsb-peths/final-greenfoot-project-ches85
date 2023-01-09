@@ -19,7 +19,7 @@ public class MyWorld extends World
         // Create a new world with 600x600 cells with a cell size of 1x1 pixels.
         super(600, 600, 1);
         
-        // Create the elephant object
+        // Create the king object
         King king = new King();
         addObject(king, 300, 300);
         
@@ -31,7 +31,7 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         
-        //createChecker();
+        createChecker();
     }
     
     /**
@@ -50,12 +50,20 @@ public class MyWorld extends World
     }
     
     
+    /**
+     * End the game and draw 'Game Over'
+     */
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 300);
+    }
     
     
     /**
      * Create a new apple at random location at top of screen.
      */
-    public void createApple()
+    public void createChecker()
     {
         Checker checker = new Checker();
         //checker.setSpeed(level);
