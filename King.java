@@ -32,7 +32,7 @@ public class King extends Actor
             move(2);
             //facing = "right";
         }
-       
+
     }
     /**
     * Eat the checker and spawn new checker if a checker is eaten.
