@@ -25,6 +25,17 @@ public class King extends Actor
             move(2);
             //facing = "right";
         }
+        else if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY() - 1);
+            //facing = "up";
+        }
+        else if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY() + 1);
+            //facing = "down";
+        }
+        
 
     }
     /**
