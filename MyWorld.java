@@ -23,8 +23,8 @@ public class MyWorld extends World
         King king = new King();
         addObject(king, 300, 300);
         
-        Checker checker = new Checker();
-        addObject(checker, 300, 0);
+        Draught draught = new Draught();
+        addObject(draught, 300, 0);
         
         //Create a label
         scoreLabel = new Label(0, 80);
