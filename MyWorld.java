@@ -32,6 +32,7 @@ public class MyWorld extends World
         
         
         createChecker();
+        
     }
     
     /**

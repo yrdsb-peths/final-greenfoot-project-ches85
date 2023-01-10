@@ -35,7 +35,7 @@ public class King extends Actor
             setLocation(getX(), getY() + 1);
             //facing = "down";
         }
-
+        eat();
     }
     /**
     * Eat the checker and spawn new checker if a checker is eaten.
