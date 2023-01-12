@@ -28,12 +28,40 @@ public class Draught extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+        if(direction == 1)
+        {
+            move(1);
+        }
         
+        if(getY() == 600)
+        {
+            direction = 2;
+            turnAround();
+        }
         
+        if(direction == 2)
+        {
+            move(-1);
+        }
+        
+        if(getY() == 0)
+        {
+            direction = 1;
+            turnAround();
+        }
     }
     
     public void setSpeed(int Speed)
     {
         speed = Speed;
     }
+    
+    // Draught turn around for moving up and down
+    public void turnAround();
+    {
+        turn(180);
+    }
+   
+    
+    
 }
