@@ -31,7 +31,7 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         
-        createChecker();
+        createCoin();
         
     }
     
@@ -64,13 +64,13 @@ public class MyWorld extends World
     /**
      * Create a new apple at random location at top of screen.
      */
-    public void createChecker()
+    public void createCoin()
     {
-        Checker checker = new Checker();
-        //checker.setSpeed(level);
+        Coin Coin = new Coin();
+        //Coin.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = Greenfoot.getRandomNumber(600);
-        addObject(checker, x, y);
+        addObject(Coin, x, y);
     }
     
     

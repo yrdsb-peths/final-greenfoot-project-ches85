@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class TitleScreen extends World
 {
-    Label titleLabel = new Label("The King", 60);
+    //Label titleLabel = new Label("The King", 80);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -20,7 +20,7 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
 
-        addObject(titleLabel, 200, 100);
+        //addObject(titleLabel, 200, 100);
         prepare();
     }
 
@@ -45,13 +45,27 @@ public class TitleScreen extends World
     {
         //King_black king = new King();
         //addObject(king,451,100);
-        Label label = new Label("Press <space> to Start", 40);
+        Label label = new Label("Press <space> to Start", 50);
         addObject(label,90,255);
-        Label label2 = new Label("Use arrow keys to move", 40);
+        Label label2 = new Label("Arrow keys or WASD to move", 40);
         addObject(label2,90,255);
-        label.setLocation(275,262);
-        label2.setLocation(262,313);
-        label.setLocation(277,231);
+        Label label3 = new Label("Collect the coins", 40);
+        addObject(label3,174,337);
+        label3.setLocation(204,340);
+        Label label4 = new Label("Run from the red checker", 40);
+        addObject(label4,97,387);
+        label.setLocation(270,189);
+        label2.setLocation(270,259);
+        label3.setLocation(175,324);
+        label4.setLocation(240,392);
+        Coin coin = new Coin();
+        addObject(coin,465,316);
+        coin.setLocation(409,326);
+        King king = new King();
+        addObject(king,419,103);
+        King_title king_title = new King_title();
+        addObject(king_title,166,68);
+        king_title.setLocation(173,89);
     }
 }
 

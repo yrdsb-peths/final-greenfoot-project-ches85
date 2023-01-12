@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Checker here.
- * Checker, the food for the king.
+ * Write a description of class Coin here.
+ * Coin, the food for the king.
  * 
  * @author Brady
  * @version Dec 2022
  */
-public class Checker extends Actor
+public class Coin extends Actor
 {
     /**
-     * Act - do whatever the Checker wants to do. This method is called whenever
+     * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage[] coinRight = new GreenfootImage[11];
@@ -21,15 +21,15 @@ public class Checker extends Actor
     /**
      * Constructor - The code that gets run one time when object is created
      */
-    public Checker()
+    public Coin()
     {
         for(int i = 0; i < coinRight.length;i++)
         {
             coinRight[i] = new GreenfootImage("images/coin_spin/coin" + i + ".png");
-            coinRight[i].scale(100, 100);
+            coinRight[i].scale(70, 70);
         }
                 
-        //animationTimer.mark();
+        animationTimer.mark();
         
         //Initial elephant image
         setImage(coinRight[0]);
@@ -41,11 +41,11 @@ public class Checker extends Actor
     int imageIndex = 0;
     public void animateCoin()
     {
-        //if(animationTimer.millisElapsed() < 100)
-        //{
-        //    return;
-        //}    
-        //animationTimer.mark();
+        if(animationTimer.millisElapsed() < 50)
+        {
+            return;
+        }    
+        animationTimer.mark();
         
         if(facing.equals("right"))
         {
@@ -67,6 +67,6 @@ public class Checker extends Actor
         animateCoin();       
         
     }
-    // Creates instance of the world where the apple lives in
+    // Creates instance of the world where the coin lives in
     //MyWorld world = (MyWorld) getWorld();
 }
