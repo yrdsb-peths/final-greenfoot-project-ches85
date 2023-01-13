@@ -29,12 +29,7 @@ public class Draught extends Actor
             world.gameOver();
             world.removeObject(this);
         }
-        
-        if(directionDown == 1)
-        {
-            setLocation(getX(), getY() + 1);
-        }
-        
+       
         if(getY() == 580)
         {
             directionDown = 2;   
