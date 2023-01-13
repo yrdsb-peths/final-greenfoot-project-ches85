@@ -17,7 +17,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 580x580 cells with a cell size of 1x1 pixels.
-        super(580, 580, 1);
+        super(580, 580, 1, false);
         
         // Create the king object
         King king = new King();

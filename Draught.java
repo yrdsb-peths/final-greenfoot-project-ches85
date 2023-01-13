@@ -20,26 +20,20 @@ public class Draught extends Actor
     {
         // Add your action code here.
         
-        setLocation(getX(), getY() + 1);
+        setLocation(getX(), getY() + speed);
+        
+        if(getY() >= 200 || getY() <= 0)
+        {
+            speed = -speed;   
+        }
         
         // Remove Draught and draw game over when Draught gets to bottom
-        MyWorld world = (MyWorld) getWorld();
         if(isTouching(King.class))
         {
+            MyWorld world = (MyWorld) getWorld();
             world.gameOver();
             world.removeObject(this);
         }
-       
-        if(getY() == 580)
-        {
-            directionDown = 2;   
-        }
-        
-        if(directionDown == 2)
-        {
-            setLocation(getX(), getY() - 1);
-        }
-        
     }
     
     public void setSpeed(int Speed)
