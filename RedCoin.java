@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Draught here.
+ * Write a description of class RedCoin here.
  * Food for our elephant.
  * 
  * @author Brady 
  * @version Dec 2022
  */
-public class Draught extends Actor
+public class RedCoin extends Actor
 {
     int speed = 1;
     //int direction = 1;
     int directionDown = 1;
     /**
-     * Act - do whatever the Draught wants to do. This method is called whenever
+     * Act - do whatever the RedCoin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -22,17 +22,18 @@ public class Draught extends Actor
         
         setLocation(getX(), getY() + speed);
         
-        if(getY() >= 200 || getY() <= 0)
+        if(getY() >= 580 || getY() <= 0)
         {
             speed = -speed;   
         }
         
-        // Remove Draught and draw game over when Draught gets to bottom
+        // Remove RedCoin and draw game over when RedCoin gets to bottom
         if(isTouching(King.class))
         {
+            removeTouching(King.class);
             MyWorld world = (MyWorld) getWorld();
             world.gameOver();
-            world.removeObject(this);
+            //world.removeObject(this);
         }
     }
     
@@ -40,11 +41,4 @@ public class Draught extends Actor
     {
         speed = Speed;
     }
-    
-    // Draught turn around for moving up and down
-    //public void turnAround();
-    //{
-    //    turn(180);
-    //}
-    
 }

@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
+    int level = 1;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,8 +24,8 @@ public class MyWorld extends World
         King king = new King();
         addObject(king, 300, 300);
         
-        Draught draught = new Draught();
-        addObject(draught, 300, 0);
+        RedCoin redCoin = new RedCoin();
+        addObject(redCoin, 300, 0);
         
         //Create a label
         scoreLabel = new Label(0, 80);
@@ -44,10 +45,12 @@ public class MyWorld extends World
         score++;
         scoreLabel.setValue(score);
         
-     //   if(score % 5 == 0)
+        if(score % 5 == 0)
         {
-        //    level += 1;
+            level += 1;
+            createRedCoin();
         }
+        
     }
     
     
@@ -62,17 +65,26 @@ public class MyWorld extends World
     
     
     /**
-     * Create a new apple at random location at top of screen.
+     * Create a new coin at random location at top of screen.
      */
     public void createCoin()
     {
-        Coin Coin = new Coin();
-        //Coin.setSpeed(level);
+        Coin coin = new Coin();
         int x = Greenfoot.getRandomNumber(580);
         int y = Greenfoot.getRandomNumber(580);
-        addObject(Coin, x, y);
+        addObject(coin, x, y);
     }
     
-    
+    /**
+     * Create a new coin at random location at top of screen.
+     */
+    public void createRedCoin()
+    {
+        RedCoin redCoin = new RedCoin();
+        redCoin.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(580);
+        int y = 0;
+        addObject(redCoin, x, y);
+    }
     
 }

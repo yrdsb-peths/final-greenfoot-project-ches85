@@ -52,7 +52,7 @@ public class TitleScreen extends World
         Label label3 = new Label("Collect the coins", 40);
         addObject(label3,174,337);
         label3.setLocation(204,340);
-        Label label4 = new Label("Run from the red checker", 40);
+        Label label4 = new Label("Run from the red coin", 40);
         addObject(label4,97,387);
         label.setLocation(270,189);
         label2.setLocation(270,259);
@@ -66,6 +66,11 @@ public class TitleScreen extends World
         King_title king_title = new King_title();
         addObject(king_title,166,68);
         king_title.setLocation(173,89);
+        Red_Coin_Image red_Coin_Image = new Red_Coin_Image();
+        addObject(red_Coin_Image,478,399);
+        coin.setLocation(471,306);
+        coin.setLocation(473,314);
+        label4.setLocation(182,399);
     }
 }
 
