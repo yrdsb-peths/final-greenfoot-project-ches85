@@ -10,7 +10,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Draught extends Actor
 {
     int speed = 1;
-    int direction = 1;
+    //int direction = 1;
+    int directionDown = 1;
     /**
      * Act - do whatever the Draught wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,8 +19,8 @@ public class Draught extends Actor
     public void act() 
     {
         // Add your action code here.
-        setLocation(getX(), getY() + 1);
         
+        setLocation(getX(), getY() + 1);
         
         // Remove Draught and draw game over when Draught gets to bottom
         MyWorld world = (MyWorld) getWorld();
@@ -28,27 +29,22 @@ public class Draught extends Actor
             world.gameOver();
             world.removeObject(this);
         }
-        if(direction == 1)
+        
+        if(directionDown == 1)
         {
-            move(1);
+            setLocation(getX(), getY() + 1);
         }
         
-        if(getY() == 600)
+        if(getY() == 580)
         {
-            direction = 2;
-            turnAround();
+            directionDown = 2;   
         }
         
-        if(direction == 2)
+        if(directionDown == 2)
         {
-            move(-1);
+            setLocation(getX(), getY() - 1);
         }
         
-        if(getY() == 0)
-        {
-            direction = 1;
-            turnAround();
-        }
     }
     
     public void setSpeed(int Speed)
@@ -57,11 +53,9 @@ public class Draught extends Actor
     }
     
     // Draught turn around for moving up and down
-    public void turnAround();
-    {
-        turn(180);
-    }
-   
-    
+    //public void turnAround();
+    //{
+    //    turn(180);
+    //}
     
 }
