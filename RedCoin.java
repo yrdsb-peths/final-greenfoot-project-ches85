@@ -1,39 +1,36 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RedCoin here.
- * Food for our elephant.
- * 
+ * The enemy of the king, who must be avoided at all costs.
  * @author Brady 
- * @version Dec 2022
+ * @version Jan 2023
  */
 public class RedCoin extends Actor
 {
+    // Speed of the red coin
     int speed = 1;
-    //int direction = 1;
+    // Direction the red coin is going
     int directionDown = 1;
+    
     /**
-     * Act - do whatever the RedCoin wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Red coin moves up and down in order to block the king from getting the coins. 
+     * As the coins are added, they will get progressively faster.
      */
     public void act() 
     {
-        // Add your action code here.
-        
         setLocation(getX(), getY() + speed);
         
+        // When red coin reaches the bottom, it will move back up
         if(getY() >= 580 || getY() <= 0)
         {
             speed = -speed;   
         }
-        
-        // Remove RedCoin and draw game over when RedCoin gets to bottom
+        // If red coin touches the king, the game is over and king is removed.
         if(isTouching(King.class))
         {
             removeTouching(King.class);
             MyWorld world = (MyWorld) getWorld();
             world.gameOver();
-            //world.removeObject(this);
         }
     }
     

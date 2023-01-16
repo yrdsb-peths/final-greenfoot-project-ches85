@@ -1,22 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
- * 
+ * The world in which the king lives in.
  * @ Brady
- * @ Version Dec 2022
+ * @ Version Jan 2023
  */
 public class MyWorld extends World
 {
+    // Variable to hold the score
     public int score = 0;
-    Label scoreLabel;
+    // Variable for the level
     int level = 1;
+    
+    Label scoreLabel;
     /**
      * Constructor for objects of class MyWorld.
-     * 
      */
     public MyWorld()
     {    
+       
         // Create a new world with 580x580 cells with a cell size of 1x1 pixels.
         super(580, 580, 1, false);
         
@@ -24,35 +26,31 @@ public class MyWorld extends World
         King king = new King();
         addObject(king, 300, 300);
         
+        // Create the red coin object
         RedCoin redCoin = new RedCoin();
         addObject(redCoin, 300, 0);
         
-        //Create a label
+        //Create the label
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
-        
+        // Spawn new coins
         createCoin();
-        
     }
     
     /**
-     * Increase score
+     * Increase score on the counter
      */
-    
     public void increaseScore()
     {
         score++;
         scoreLabel.setValue(score);
-        
         if(score % 5 == 0)
         {
-            level += 1;
+            level += 0.5;
             createRedCoin();
         }
-        
     }
-    
     
     /**
      * End the game and draw 'Game Over'
@@ -62,7 +60,6 @@ public class MyWorld extends World
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 300);
     }
-    
     
     /**
      * Create a new coin at random location at top of screen.
@@ -86,5 +83,4 @@ public class MyWorld extends World
         int y = 0;
         addObject(redCoin, x, y);
     }
-    
 }

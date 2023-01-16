@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class King_title here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Image of the name, "King".
+ * @author Brady
+ * @version Jan 2023
  */
 public class King_title extends Actor
 {
@@ -14,6 +13,6 @@ public class King_title extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        // Image of king on title screen.
     }    
 }

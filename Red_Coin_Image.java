@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Red_Coin_Image here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The image of the red coin in the title screen.
+ * @author Brady 
+ * @version Jan 2023
  */
 public class Red_Coin_Image extends Actor
 {
@@ -14,6 +13,6 @@ public class Red_Coin_Image extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        // Image of a red coin on title screen.
     }    
 }
