@@ -1,7 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class King here.
+/**s
  * The king, the one who stands above all.
  * @author Brady
  * @version Jan 2023

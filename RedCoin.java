@@ -11,7 +11,8 @@ public class RedCoin extends Actor
     int speed = 1;
     // Direction the red coin is going
     int directionDown = 1;
-    
+    // Sound effect when red coin touches the king
+    GreenfootSound coinSound = new GreenfootSound("gameoversound.mp3");
     /**
      * Act - Red coin moves up and down in order to block the king from getting the coins. 
      * As the coins are added, they will get progressively faster.
@@ -30,6 +31,7 @@ public class RedCoin extends Actor
         {
             removeTouching(King.class);
             MyWorld world = (MyWorld) getWorld();
+            coinSound.play();
             world.gameOver();
         }
     }
