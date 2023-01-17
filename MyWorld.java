@@ -47,7 +47,7 @@ public class MyWorld extends World
         scoreLabel.setValue(score);
         if(score % 5 == 0)
         {
-            level += 0.5;
+            level += 1;
             createRedCoin();
         }
     }
